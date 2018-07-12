@@ -24,4 +24,10 @@ describe('expression builder', () => {
     const expr = builder.getExpression();
     expect(expr.evaluate(null)).toEqual(-60);
   });
+
+  it('2*2*2', () => {
+    const builder = new ExprBuilder('2*2*2');
+    const expr = builder.getExpression();
+    expect(expr.evaluate(null)).toEqual(8);
+  });
 });
